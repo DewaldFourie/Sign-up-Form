@@ -1,4 +1,9 @@
 
+@font-face {
+    font-family: snowy;
+    src: url(fonts/Snow\ Kei.ttf);
+}
+
 html {
     min-height: 100vh;
 }
@@ -28,9 +33,21 @@ img {
 .left-header {
     margin-top: 220px;
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 39.65%;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.4)
+}
+
+.left-heading {
+    font-family: snowy;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 /* Right main styling */
@@ -47,19 +64,24 @@ img {
     flex-direction: column;
     padding: 50px;
     margin-bottom: 10px;
+    
 }
 
 
 
 .main-text {
+    font-size: larger;
+    max-width: 700px;
     margin-top: 60px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Phudu', cursive;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Right Center*/
 
 .right-main-center {
     height: 100vh;
+    font-size: large;
     display: flex;
     flex-direction: column;
     padding: 1rem 6rem 3rem ; 
@@ -69,6 +91,10 @@ img {
     margin: 0 20px;
 }
 
+.user-form {
+    font-family: 'Phudu', cursive;
+    font-family: 'Roboto', sans-serif;
+}
 
 .form-row {
     display: flex;
@@ -83,13 +109,62 @@ img {
 }
 .form-element input {
     min-height: 1.7rem;
+    border-radius: 0.5rem;
+    border-width: 0.1rem;
+    font-size: medium;
+}
+
+.form-element input[type='password'] {
+    border: solid rgb(204, 102, 102);
+}
+
+.form-element input:focus {
+    border: solid lightskyblue;
+    box-shadow: 1px 1px 10px rgb(54, 54, 54) ;
+}
+
+.labels {
+    font-style: oblique;
+    font-family: 'Phudu', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-header {
+    font-weight: bolder;
+    font-style: initial;
 }
 
 /* Right Bottom */
 .right-main-bottom {
     height: 100vh;
-    padding: 50px;
-    margin-top: 10px;
+    font-family: 'Phudu', cursive;
+    font-family: 'Roboto', sans-serif;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    color: white;
+    font-size: large;
+    border: none;
+    border-radius: 2rem;
+    background-color: rgb(0, 0, 0);
+    width: 11rem;
+    height: 3rem;
+    padding: 0px 7px ;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: solid;
+}
+
+a {
+    color: blue;
 }
 
 /* Styling for smaller screen compatibility */
@@ -97,6 +172,11 @@ img {
 
     .right-main-center {
         max-width: 200px;
+        margin-left: 50px;
+    }
+
+    .right-main-top {
+        margin-top: 200px;
     }
 
     .form-row {
@@ -113,5 +193,9 @@ img {
 
     .form-row input {
         width: 200px;
+    }
+
+    .left-heading {
+        font-size: 2rem;
     }
 }
