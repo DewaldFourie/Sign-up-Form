@@ -30,44 +30,47 @@
         </div>
         <div class="right-main-center">
             <h2 class="form-header" >Let's do This</h2>
-            <form action="" method="get" class="user-form">
+            <form action="" method="post" id="user-form" class="user-form">
                 <div class="form-row">
                     <div class="form-element">
                         <label class="labels" for="f-name">First Name:</label>
-                        <input id="f-name" name="f-name" type="text">
+                        <input class="valid" id="f-name" name="f-name" type="text">
                     </div>
                     <div class="form-element">
                         <label class="labels" for="l-name">Last Name:</label>
-                        <input id="l-name" name="l-name" type="text">
+                        <input class="valid" id="l-name" name="l-name" type="text">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-element">
                         <label class="labels" for="email">Email:</label>
-                        <input type="email" name="email" id="email">
+                        <input class="valid" type="email" name="email" id="email">
                     </div>
                     <div class="form-element">
                         <label class="labels" for="phone-number">Phone Number:</label>
-                        <input type="text" name="phone-number" id="phone-number">
+                        <input class="valid" type="text" name="phone-number" id="phone-number">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-element">
                         <label class="labels" for="password">Password:</label>
-                        <input type="password" name="password" id="password">
+                        <input  class="invalid" type="password" name="password" id="password" onkeyup="check();" required>
+                        <small id="password-feedback"></small>
                     </div>
                     <div class="form-element">
-                        <label class="labels" for="c-password">Confirm Password:</label>
-                        <input type="password" name="c-password" id="c-password">
+                        <label class="labels" for="cpassword">Confirm Password:</label>
+                        <input class="invalid" type="password" name="cpassword" id="cpassword" onkeyup="check();" required>
+                        <small id="cpassword-feedback"></small>
                     </div>
                 </div>
             
         </div>
         <div class="right-main-bottom">
-            <button>Create Account</button>
+            <button type="submit" class="submit" disabled>Create Account</button>
             </form>
             <h4 class="log-in">Already have an account? <a href="">Log in</a></h4>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>

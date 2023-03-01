@@ -115,15 +115,19 @@ body {
     gap: 5px;
 }
 
-.form-element input[type='password'] {
-    border: solid rgb(204, 102, 102);
-}
-
 .form-element input {
     min-height: 1.7rem;
     border-radius: 0.5rem;
     border-width: 0.1rem;
     font-size: medium;
+}
+
+.valid {
+    border: solid black;
+}
+
+.invalid {
+    border: solid red;
 }
 
 
@@ -138,13 +142,21 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.labels:focus {
-   
-}
 
 .form-header {
     font-weight: bolder;
     font-style: initial;
+}
+
+#password-feedback {
+    max-width: 150px;
+    align-self: flex-start;
+    color: red;
+}
+
+#cpassword-feedback {
+    align-self: flex-end;
+    color: red;
 }
 
 /* Right Bottom */
